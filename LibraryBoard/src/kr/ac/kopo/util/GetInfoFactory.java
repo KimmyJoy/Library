@@ -19,6 +19,10 @@ public class GetInfoFactory {
 	public static void setID(String iD) {
 		ID = iD;
 	}
+	
+	public static void refreshID() {
+		ID = null;
+	}
 //	public static String getISBN() {
 //		return ISBN;
 //	}

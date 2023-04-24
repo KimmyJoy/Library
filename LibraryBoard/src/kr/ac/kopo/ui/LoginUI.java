@@ -59,6 +59,7 @@ public class LoginUI extends BaseUI {
 				}
 			} else {
 				System.out.println("일치하는 아이디가 없습니다");
+				this.execute();
 			}
 			}
 			break;
@@ -67,6 +68,7 @@ public class LoginUI extends BaseUI {
 			break;
 		case 9:
 			ui = new LibraryUI();
+			break;
 		case 0:
 			ui = new ExitUI();
 			break;

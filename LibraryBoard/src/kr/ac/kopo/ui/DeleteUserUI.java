@@ -28,6 +28,8 @@ public class DeleteUserUI extends BaseUI {
 				memService.deleteUser(GetInfoFactory.getID());
 				System.out.println("");
 				System.out.println("탈퇴가 완료되었습니다");
+				GetInfoFactory.refreshID();
+				new LibraryUI().execute();
 			} else {
 				System.out.println("대여중인 도서가 있어 불가능합니다");
 				System.out.println("");
