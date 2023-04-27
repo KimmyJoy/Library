@@ -217,7 +217,7 @@ public class BookDAO {
 	public void deleteBook(String isbn) {
 		
 		StringBuilder sql = new StringBuilder();
-		sql.append("delete ");// instr 때문에 전부 입력받아야함....그리고 애초에 등록이라 다 입력해야함!!
+		sql.append("delete ");
 		sql.append(" from book_board ");
 		sql.append(" where isbn = ? ");
 		

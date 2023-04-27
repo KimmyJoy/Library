@@ -1,6 +1,7 @@
 package kr.ac.kopo.ui;
 
-import kr.ac.kopo.LibraryServiceFactory;
+import kr.ac.kopo.BookServiceFactory;
+import kr.ac.kopo.RentServiceFactory;
 import kr.ac.kopo.service.BookService;
 import kr.ac.kopo.service.RentService;
 import kr.ac.kopo.util.GetInfoFactory;
@@ -13,8 +14,8 @@ public class RentalUI extends BaseUI {
 	private RentService rentService;
 	
 	public RentalUI() {
-		bookService = LibraryServiceFactory.getbokInstance();
-		rentService = LibraryServiceFactory.getrentInstance();
+		bookService = BookServiceFactory.getbokInstance();
+		rentService = RentServiceFactory.getrentInstance();
 	}
 
 	
@@ -29,7 +30,7 @@ public class RentalUI extends BaseUI {
 			rent = new RentVO();
 			rent.setId(GetInfoFactory.getID());
 			rent.setIsbn(isbn);
-			rent.setTitle(book.getTitle());
+			book.getTitle();
 			rentService.insertRent(rent);
 			System.out.println("대여 완료되었습니다");
 			new MypageUI().execute();

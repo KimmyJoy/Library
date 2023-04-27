@@ -1,6 +1,6 @@
 package kr.ac.kopo.ui;
 
-import kr.ac.kopo.LibraryServiceFactory;
+import kr.ac.kopo.BookServiceFactory;
 import kr.ac.kopo.service.BookService;
 import kr.ac.kopo.vo.BookVO;
 
@@ -10,7 +10,7 @@ public class AddBookUI extends BaseUI {
 	private BookService bookService;
 	
 	public AddBookUI(){
-	 bookService = LibraryServiceFactory.getbokInstance();//얘 필요함??
+	 bookService = BookServiceFactory.getbokInstance();//얘 필요함??
 	}
 	
 	@Override

@@ -2,7 +2,7 @@ package kr.ac.kopo.ui;
 
 import java.util.Scanner;
 
-import kr.ac.kopo.LibraryServiceFactory;
+import kr.ac.kopo.BookServiceFactory;
 import kr.ac.kopo.service.BookService;
 import kr.ac.kopo.util.GetInfoFactory;
 import kr.ac.kopo.vo.BookVO;
@@ -12,7 +12,7 @@ public class SearchOneBookUI extends BaseUI {
 	private BookService bookService;// 이제 db에서 가져오는 것이므로 static일 필요가 없음...
 
 	public SearchOneBookUI() {
-		bookService = LibraryServiceFactory.getbokInstance();
+		bookService = BookServiceFactory.getbokInstance();
 	}
 
 	private int menu() {

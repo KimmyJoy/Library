@@ -2,7 +2,7 @@ package kr.ac.kopo.ui;
 
 import java.util.List;
 
-import kr.ac.kopo.LibraryServiceFactory;
+import kr.ac.kopo.BookServiceFactory;
 import kr.ac.kopo.service.BookService;
 import kr.ac.kopo.vo.BookVO;
 //회원, 도서 서치가 가능하도록 만들어야함....
@@ -13,7 +13,7 @@ public class SearchAllBookUI extends BaseUI {//서비스도 여러가지가 있�
 	
 	public SearchAllBookUI() {
 		//bookService = new BookService(); 이러면 매번 조회때마다 새로운 boardservice, 새로운 dao를 생성하게 되므로 의미가 없어지게 됨
-		bookService = LibraryServiceFactory.getbokInstance();
+		bookService = BookServiceFactory.getbokInstance();
 	}
 	
 	@Override

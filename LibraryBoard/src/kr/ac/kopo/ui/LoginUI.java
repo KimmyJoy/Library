@@ -2,7 +2,7 @@ package kr.ac.kopo.ui;
 
 import java.util.Scanner;
 
-import kr.ac.kopo.LibraryServiceFactory;
+import kr.ac.kopo.MemberServiceFactory;
 import kr.ac.kopo.service.MemberService;
 import kr.ac.kopo.util.GetInfoFactory;
 import kr.ac.kopo.vo.MemberVO;
@@ -13,7 +13,7 @@ public class LoginUI extends BaseUI {
 	private MemberService memService;
 	
 	public LoginUI() {
-		memService = LibraryServiceFactory.getmemInstance();
+		memService = MemberServiceFactory.getmemInstance();
 	}
 	
 	private int menu() {

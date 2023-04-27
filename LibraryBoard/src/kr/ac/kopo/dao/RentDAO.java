@@ -17,13 +17,6 @@ import kr.ac.kopo.vo.RentVO;
  */
 //data와 관련된 애는 dao 하나뿐이므로 얘만 수정하면 모든게 끝남....
 public class RentDAO {
-
-	/*
-	 * private List<BookVO> boardList;//맵으로 하는건 의미가 없음. 게시글 번호는 key로 쓰려는 것이 아님
-	 * 
-	 * public BookDAO() { boardList = new ArrayList<>(); }
-	 */
-	
 	// 반납
 	public void returnBook(RentVO rent) {
 		StringBuilder sql = new StringBuilder();
@@ -64,12 +57,12 @@ public class RentDAO {
 		}
 	}
 	
-	public void insertRent(RentVO rent) {// t_board로...하면 되는 것...
+	public void insertRent(RentVO rent) {
 
 		// boardList.add(board); DB용으로 필요 없어짐 쿼리가 필요해짐 1.7버전의 try 캐치문을 쓸예정임
 		StringBuilder sql = new StringBuilder();
 		sql.append("insert into Rental(no, id, isbn, title) ");
-		sql.append(" values(seq_Rental_no.nextval, ?, ?, ?) ");// 내용이 어떻게 적힐지 모르는 변수는 ?임 이야아아앙... 이변수값은 board 변수가 알고 있음
+		sql.append(" values(seq_Rental_no.nextval, ?, ?, ?) ");
 
 		int cnt = 0;
 		try (Connection conn = new ConnectionFactory().getConnection();

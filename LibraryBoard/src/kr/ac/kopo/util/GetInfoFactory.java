@@ -7,12 +7,6 @@ public class GetInfoFactory {
 */
 	private static String ID;
 	
-//	public static int getDAEYEO() {
-//		return DAEYEO;
-//	}
-//	public static void setDAEYEO(int DAeyeo) {
-//		DAEYEO = DAeyeo;
-//	}
 	public static String getID() {
 		return ID;
 	}
@@ -23,19 +17,6 @@ public class GetInfoFactory {
 	public static void refreshID() {
 		ID = null;
 	}
-//	public static String getISBN() {
-//		return ISBN;
-//	}
-//	public static void setISBN(String iSBN) {
-//		ISBN = iSBN;
-//	}
-//	public static String getTITLE() {
-//		return TITLE;
-//	}
-//	public static void setTITLE(String tITLE) {
-//		TITLE = tITLE;
-//	}
-//	
 	//각각의 값을 초기화해주기 위한 메소드 필요
 	
 }

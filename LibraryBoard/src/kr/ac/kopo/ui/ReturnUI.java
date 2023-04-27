@@ -1,6 +1,7 @@
 package kr.ac.kopo.ui;
 
-import kr.ac.kopo.LibraryServiceFactory;
+import kr.ac.kopo.BookServiceFactory;
+import kr.ac.kopo.RentServiceFactory;
 import kr.ac.kopo.service.BookService;
 import kr.ac.kopo.service.RentService;
 import kr.ac.kopo.util.GetInfoFactory;
@@ -12,8 +13,8 @@ public class ReturnUI extends BaseUI {
 
 
 	public ReturnUI() {
-		bookService = LibraryServiceFactory.getbokInstance();
-		rentService = LibraryServiceFactory.getrentInstance();
+		bookService = BookServiceFactory.getbokInstance();
+		rentService = RentServiceFactory.getrentInstance();
 	}
 
 	@Override

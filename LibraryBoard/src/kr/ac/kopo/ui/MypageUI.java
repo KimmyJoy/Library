@@ -2,7 +2,7 @@ package kr.ac.kopo.ui;
 
 import java.util.List;
 
-import kr.ac.kopo.LibraryServiceFactory;
+import kr.ac.kopo.RentServiceFactory;
 import kr.ac.kopo.service.RentService;
 import kr.ac.kopo.util.GetInfoFactory;
 import kr.ac.kopo.vo.RentVO;
@@ -13,7 +13,7 @@ public class MypageUI extends BaseUI {
 	private RentService rentService;
 	
 	public MypageUI() {
-		rentService = LibraryServiceFactory.getrentInstance();
+		rentService = RentServiceFactory.getrentInstance();
 	}
 
 	@Override

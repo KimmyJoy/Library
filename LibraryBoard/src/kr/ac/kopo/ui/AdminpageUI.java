@@ -14,26 +14,27 @@ public class AdminpageUI extends BaseUI {
 		System.out.println("[0] 종료");
 		System.out.println("====================================================================================");
 		int type = scanInt("원하는 메뉴를 입력해주세요 : ");
+		ILibraryUI ui = null;
 		
 		switch(type) {
 		case 1: 
-			new BookUI().execute();
+			ui = new BookUI();
 			break;
 		case 2:
-			new UserUI().execute();
+			ui = new UserUI();
 			break;
 		case 0:
-			new ExitUI().execute();
+			ui = new ExitUI();
 			break;
 		default :
 			System.out.println("잘못입력하셨습니다");
 			break;
 		}
-//		if(ui != null) {
-//			ui.execute();
-//		} else {
-//			System.out.println("잘못입력하셨습니다");
-//		}
+		if(ui != null) {
+			ui.execute();
+		} else {
+			System.out.println("잘못입력하셨습니다");
+		}
 	}
 
 }

@@ -1,6 +1,6 @@
 package kr.ac.kopo.ui;
 
-import kr.ac.kopo.LibraryServiceFactory;
+import kr.ac.kopo.BookServiceFactory;
 import kr.ac.kopo.service.BookService;
 import kr.ac.kopo.vo.BookVO;
 
@@ -9,7 +9,7 @@ public class DeletBookUI extends BaseUI {
 	private BookService bookService;
 	
 	public DeletBookUI() {
-		bookService = LibraryServiceFactory.getbokInstance();
+		bookService = BookServiceFactory.getbokInstance();
 	}
 
 	@Override
@@ -35,11 +35,7 @@ public class DeletBookUI extends BaseUI {
 				bookService.deleteBook(isbn);
 			} else {
 				System.out.println("이전 메뉴를 재호출합니다");
-				try {//몇초간 지연하고 싶음..
-		            Thread.sleep(2000);
-		        } catch (InterruptedException e) {
-		            e.printStackTrace();
-		        }
+				
 				new BookUI().execute();
 			}
 		} else {

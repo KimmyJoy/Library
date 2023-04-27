@@ -1,6 +1,7 @@
 package kr.ac.kopo.ui;
 
-import kr.ac.kopo.LibraryServiceFactory;
+import kr.ac.kopo.MemberServiceFactory;
+import kr.ac.kopo.RentServiceFactory;
 import kr.ac.kopo.service.MemberService;
 import kr.ac.kopo.service.RentService;
 import kr.ac.kopo.util.GetInfoFactory;
@@ -11,8 +12,8 @@ public class DeleteUserUI extends BaseUI {
 	private RentService renService;
 	
 	public DeleteUserUI() {
-		memService = LibraryServiceFactory.getmemInstance();
-		renService = LibraryServiceFactory.getrentInstance();
+		memService = MemberServiceFactory.getmemInstance();
+		renService = RentServiceFactory.getrentInstance();
 	}
 
 	@Override
@@ -35,11 +36,7 @@ public class DeleteUserUI extends BaseUI {
 				System.out.println("");
 				System.out.println("마이페이지로 이동합니다....");
 				System.out.println("");
-				try {//몇초간 지연하고 싶음..
-					Thread.sleep(2000);
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
+				Thread.sleep(2000);
 				new MypageUI().execute();
 			}
 		}
