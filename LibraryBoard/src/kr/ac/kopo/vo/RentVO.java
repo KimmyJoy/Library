@@ -127,20 +127,6 @@ public class RentVO {
 //		this.latefee = latefee;
 //	}
 
-	public int getDaeyeo() {
-		return daeyeo;
-	}
-
-	public void setDaeyeo(int daeyeo) {
-		this.daeyeo = daeyeo;
-	}
-
-	@Override
-	public String toString() {
-		return "RentVO [no= " + no + ", isbn=" + isbn +", daeyeo=" + daeyeo +", id=" + id + ", rentdate=" + rentdate + ", returndate" + returndate + ", renewdate=" + renewdate
-				+ ", title=" + title + "]";
-//		return "RentVO [rentdate=" + rentdate + ", returndate" + returndate + ", renewdate=" + renewdate
-//				+ ", overdewdate=" + overdewdate + ", latefee=" + latefee + ", daeyeo=" + daeyeo + "]";
-	}
+	
 
 }

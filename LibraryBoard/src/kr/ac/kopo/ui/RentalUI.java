@@ -24,19 +24,22 @@ public class RentalUI extends BaseUI {
 		RentVO rent = null;
 		//현재 이미 로그인 된 상태(팩토리에 아이디 값이 저장되어있음)
 		String isbn = scanStr("대여를 원하는 도서의 ISBN을 입력해주세요: ");
-		if(bookService.selectByIssbn(isbn)) {
-		
-			BookVO book = bookService.selectByIsbn(isbn);
+		BookVO book = bookService.selectByIsbn(isbn);
+		if(bookService.selectByIssbn(isbn)&&book.getDaeyeo()!=0) {
 			rent = new RentVO();
 			rent.setId(GetInfoFactory.getID());
 			rent.setIsbn(isbn);
-			book.getTitle();
+			String title = book.getTitle();
+			rent.setTitle(title);
 			rentService.insertRent(rent);
 			System.out.println("대여 완료되었습니다");
 			new MypageUI().execute();
+		} else if(bookService.selectByIssbn(isbn)&&book.getDaeyeo()==0) {
+			System.out.println("대여 중인 도서입니다. 다른 책을 확인해주세요");
+			new MypageUI().execute();
 		} else {
 			System.out.println("잘못입력하였습니다. 다시 입력해주세요");
-			this.execute();
+			this.execute();			
 		}
 		
 

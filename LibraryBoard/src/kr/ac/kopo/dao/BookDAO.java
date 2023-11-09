@@ -65,7 +65,7 @@ public class BookDAO {
 			ResultSet rs = pstmt.executeQuery();// 리턴타입이 rsultset임
 
 			while (rs.next()) {
-//				int barcode 	= rs.getInt("barcode");//넘버 컬럼에 있는 int를 가져오면 됨 각각의 컬럼형태로 만들어야함
+//				int barcode = rs.getInt("barcode");//넘버 컬럼에 있는 int를 가져오면 됨 각각의 컬럼형태로 만들어야함
 				String isbn = rs.getString("isbn");// 넘버 컬럼에 있는 int를 가져오면 됨 각각의 컬럼형태로 만들어야함
 				String title = rs.getString("title");
 				String writer = rs.getString("writer");

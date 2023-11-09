@@ -14,7 +14,7 @@ public class SearchAlluserUI extends BaseUI {//서비스도 여러가지가 있�
 	
 	public SearchAlluserUI() {
 		//bookService = new BookService(); 이러면 매번 조회때마다 새로운 boardservice, 새로운 dao를 생성하게 되므로 의미가 없어지게 됨
-		bookService = LibraryServiceFactory.getInstance();
+		bookService = LibraryServiceFactory.getbokInstance();
 	}
 	
 	@Override

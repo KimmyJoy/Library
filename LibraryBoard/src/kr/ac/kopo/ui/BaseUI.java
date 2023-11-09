@@ -23,7 +23,7 @@ public abstract class BaseUI implements ILibraryUI {//abstract인 인터페이�
 	
 	protected String scanStr(String msg) {//문자열 입력받는 메소드
 		System.out.print(msg);
-		return sc.nextLine();
+		return sc.nextLine().trim();
 	}
 	
 }
